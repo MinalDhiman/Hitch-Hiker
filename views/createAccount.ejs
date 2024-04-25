@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/create.css" />
+    <title>New Account Creation</title>
+</head>
+<body>
+    <div class="container">
+    <form action="/create" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        Username: <input required type="text" name="username" placeholder="Username" id="username"> <br/>
+        <button type="button" onclick="check()">Check Availability</button><br/>
+        Create Password: <input required type="password" name="password" placeholder="Password" id="password"> <br/>
+        <div class="gender">
+        Gender: <br>
+        <input checked required type="radio" name="gender"  value='M' id="male">
+        <label for="male">Male</label>
+        <input required type="radio" name="gender" value="F" id="female">
+        <label for="female">Female</label>
+        <br/> 
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <!-- Picture: <input type="file" id="pictureinput" name="picture" accept="image/*"> <br/>
+        <div class="form-group">
+            <label>Select Role:</label>
+            <input type="radio" id="driver" name="role" value="driver" required>
+            <label for="driver">Driver</label>
+            <input type="radio" id="customer" name="role" value="customer" required>
+            <label for="customer">Customer</label>
+        </div> -->
+
+        <label for="profiletext">Add car details: </label>
+        <textarea id="profiletext" name="profiletext" rows="5" cols="50" style="vertical-align: top;"></textarea>
+        <!-- <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+        </div> -->
+
+        <br/>
+        
+        <input type="submit" value="Create account">
+    </form></div>
+    <script>
+        const check=async()=>{
+           event.preventDefault();
+           const name=document.getElementById("username").value;
+           const response = await fetch("/check/"+name);
+           
+           if(!response.ok)alert("Error checking username Availablity");
+
+           const user = await response.json();
+           if(user.available)alert("Username is available");
+           else alert("Username not available");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid #e1e8ed;
+  background-color: #C6D5DF; /* Updated background color */
+}
+
+/* Brand/logo */
+.navbar-brand {
+  color: #1da1f2;
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo {
+  width: 150%;
+  max-width: 200px;
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: #1da1f2;
+  font-size: 20px;
+  margin-top: 10%;
+}
+
+/* Navbar links hover */
+.navbar-nav .nav-link:hover {
+  color: #1a91da;
+}
+
+/* Main content */
+.container {
+  padding: 20px;
+  background: #C6D5DF;
+}
+
+/* Welcome message */
+h1 {
+  color: #333; /* Dark text color */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* User Picture */
+.userPic {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  margin-top: 0;
+  margin-right: 0;
+}
+
+/* Tweet form */
+form {
+  margin-top: 2px;
+}
+
+/* Logout link */
+a {
+  color: #1da1f2;
+  font-size: 18px;
+}
+
+/* Logout link hover */
+a:hover {
+  text-decoration: none;
+  color: #1a91da;
+}
+
+/* How it works section */
+/* How it works section */
+.how-it-works {
+  background-image: url('path_to_your_image.jpg'); /* Specify the path to your background image */
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the background image */
+  padding: 100px 0; /* Add padding to the section */
+}
+
+.how-it-works h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1da1f2; /* Heading color */
+}
+
+.how-it-works .row {
+  justify-content: center;
+}
+
+.how-it-works .col-md-4 {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background behind the content */
+  padding: 20px; /* Add padding inside the box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Shadow effect */
+}
+
+.how-it-works .col-md-4 i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #1da1f2; /* Icon color */
+}
+
+
+
+
+/* Testimonials section */
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #1da1f2; /* Heading color */
+}
+
+.testimonials .row {
+  justify-content: center;
+}
+
+.testimonials .col-md-6 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Testimonial text color */
+.testimonials p {
+  color: #333; /* Dark text color */
+}
+
+/* Testimonial author color */
+.testimonials span {
+  color: #666; /* Light text color */
+}
+
+/* Add more colors */
+.hero {
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.how-it-works .col-md-4, .testimonials .col-md-6 {
+  background-color: #fff; /* White background color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Shadow effect */
+}
+/* Navbar when collapsed */
+@media (max-width: 768px) {
+  /* Background color and border */
+  .navbar {
+    background-color: #fff; /* White background color */
+    border-bottom: none; /* Remove border */
+  }
+
+  /* Navbar brand */
+  .navbar-brand {
+    color: #1da1f2; /* Brand color */
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  /* Navbar toggler icon color */
+  .navbar-toggler-icon {
+    background-color: #1da1f2; /* Toggler icon color */
+  }
+
+  /* Navbar links */
+  .navbar-nav .nav-link {
+    color: #1da1f2; /* Link color */
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  /* Navbar links hover */
+  .navbar-nav .nav-link:hover {
+    color: #1a91da; /* Hover color */
+  }
+
+  /* Dropdown menu */
+  .dropdown-menu {
+    background-color: #fff; /* White background color */
+    border: 1px solid #e1e8ed; /* Add border */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+  }
+
+  /* Dropdown menu items */
+  .dropdown-item {
+    color: #1da1f2; /* Item color */
+  }
+
+  /* Dropdown menu items hover */
+  .dropdown-item:hover {
+    background-color: #f9f9f9; /* Hover background color */
+    color: #1da1f2; /* Hover color */
+  }
+
+  /* User picture size */
+  .userPic {
+    width: 50px; /* Adjust width */
+    height: 50px; /* Adjust height */
+  }
+}

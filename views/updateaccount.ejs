@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twitter - Update Account</title>
+
+    <!-- TAILWIND/CSS AND FONTS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+    
+</head>
+<body class="bg-gray-100 flex flex-col justify-center items-center min-h-screen">
+
+  <div class="bg-white rounded-lg shadow-md w-full max-w-lg p-6 my-8">
+      <h2 class="text-3xl font-bold text-blue-600 mb-6 text-center">Update account information</h2>
+      
+      <form id="updateform" action="/users/update" method="post" enctype="multipart/form-data" class="w-full"> 
+
+          <div class="mb-4">
+              <label for="password" class="block mb-1">Password:</label>
+              <input type="password" name="password" placeholder="Password" id="password" class="w-full border border-gray-400 rounded py-2 px-3">
+          </div>
+
+          <div class="flex mb-4">
+              <label class="block mb-1">Gender:</label>
+              <div class="flex items-center ml-4">
+                  <input checked type="radio" name="gender" value="M" id="male" class="mr-1">
+                  <label for="male" class="mr-4">Male</label>
+
+                  <input required type="radio" name="gender" value="F" id="female" class="mr-1">
+                  <label for="female">Female</label>
+              </div>
+          </div>
+
+          <div class="mb-4">
+              <label for="mobile" class="block mb-1">Mobile:</label>
+              <input type="text" name="mobile" placeholder="Mobile" id="mobile" class="w-full border border-gray-400 rounded py-2 px-3">
+          </div>
+
+          <div class="mb-4">
+              <label for="email" class="block mb-1">Email:</label>
+              <input type="text" name="email" placeholder="Email" id="email" class="w-full border border-gray-400 rounded py-2 px-3">
+          </div>
+
+          <div class="mb-4">
+              <label for="pictureinput" class="block mb-1">Picture:</label>
+              <input type="file" id="pictureinput" name="picture" class="w-full border border-gray-400 rounded py-2 px-3">
+          </div>
+
+          <div class="mb-4">
+              <label for="profiletext" class="block mb-1">Twitter bio:</label>
+              <textarea id="profiletext" name="profiletext" rows="5" class="w-full border border-gray-400 rounded py-2 px-3"></textarea>
+          </div>
+
+          <div>
+              <input type="submit" value="Update info" class="cursor-pointer bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          </div>
+      </form>
+  </div>
+
+</body>
+
+</html>

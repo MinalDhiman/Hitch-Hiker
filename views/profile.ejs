@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link rel='stylesheet' href='/stylesheets/profile.css' />
+  </head>
+  <body>
+    <div class="image"><img src="<%= data.pic%>" alt="pic"></div>
+    <h3><%= data.username %></h3>
+    <h4><%= data.email%></h4>
+    <h4><%= data.mobile%></h4>
+    <h4><%= data.profiletxt%></h4>
+    
+    <div><a href="/updateProfile">Update Profile</a></div>
+    <div><a href="/tweet">Tweets</a></div>
+  </body>
+</html>

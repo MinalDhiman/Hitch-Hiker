@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitch Hiker Login</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="logo">
+      <img class="twitter-logo" src="/images/logo.png" alt="Logo">
+    </div>
+    <div class="buttons">
+      <button>Post a ride!</button>
+      <button>Find a ride!</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="background-image"></div>
+    <div class="login-form">
+      <h3>Find And Share Perfect Ride</h3>
+      <form action="/home" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Login</button>
+      </form>
+      <div><a href="/create">Don't have an account?</a></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
